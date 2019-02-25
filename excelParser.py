@@ -9,7 +9,7 @@ import os
 import openpyxl as op
 import csv
 
-#determine path
+#find path of Excel file
 while True:
     try:
         #user input
@@ -21,16 +21,17 @@ while True:
         print('The path specified does not exist')
         continue
 
-#remove existing parsed files
+#determine file extension
 extension = input('Enter the extension for each newly parsed file (ex. \'.txt\'): ').strip()
 for i in os.listdir(path):
     if i.endswith(extension):
         os.remove(i)
 
-#create files
+#create parsed files
 while True:
     try:
         delim = input('Enter the delimiter for each file [comma, pipe, etc.]: ').strip()
+        
         #create CSV files
         #return all files within specified path
         for i in os.listdir(path):
@@ -72,7 +73,6 @@ while True:
                 #rename file
                 os.rename(i,root + extension)
         break
-
     except TypeError:
         print('Delimiter not valid')
         continue
