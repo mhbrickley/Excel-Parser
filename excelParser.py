@@ -1,6 +1,8 @@
 '''
-Excel Parser
-This program parses tabs within an Excel workbook into separate files
+Author: Michael Brickley
+Python Version [2/3]: 3
+Title: Excel Parser
+Description: This program parses tabs within an Excel workbook into separate files,
 based on user defined file extension and delimiter
 '''
 
